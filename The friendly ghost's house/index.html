@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Friendly Ghost's House</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Rive: официальная библиотека анимации -->
+<script src="https://unpkg.com/@rive-app/canvas@1.0.75"></script>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header>
+ <h1>🏰 The Friendly Ghost's House</h1>
+ <div class="hud">
+  <button class="pill on" data-lv="1">Level 1</button><button class="pill" data-lv="2">Level 2</button><button class="pill" data-lv="3">Level 3</button><button class="pill" data-lv="4">Level 4</button><button class="pill" data-lv="5">Level 5</button>
+  <button class="pill" id="helpBtn" title="How to play">❓</button><button class="pill" id="eyeBtn" title="Hide / show text">👁️</button>
+  <button class="pill" id="musicBtn" title="Music">🎵</button>
+  <div class="pill" id="streak">🔥 0</div><div class="pill" id="stars">⭐ 0</div>
+ </div>
+</header>
+<section id="room" aria-label="Castle room">
+ <div class="floor"></div>
+ <div class="win" id="win"><span class="moon" id="moon">🌙</span></div>
+ <span class="deco bat" id="bat"><span>🦇</span></span>
+ <span class="deco spider" id="spider">🕷️</span>
+ <span class="deco pumpkin" id="pumpkin">🎃</span>
+ <div id="ghostWrap"><canvas id="ghost" width="380" height="380"></canvas></div>
+ <div id="speech">Hi! I'm Boo. Tap me!</div>
+ <div id="items"></div>
+ <div id="zones"></div>
+</section>
+<section id="quest">
+ <div id="cart" title="Tap to hear!"></div>
+ <div id="question"></div><div id="task"></div>
+ <div id="sentence" aria-live="polite"></div>
+ <div id="tools"><button class="pill" id="listenBtn">🔊 Listen</button><button class="pill" id="hintBtn" hidden>💡 Show me</button><button class="pill" id="sayBtn" hidden>🗣️ I said it! +⭐</button><button class="pill" id="nextBtn" hidden>Next ➡️</button></div>
+</section>
+<div id="controls"></div>
+<canvas id="confetti"></canvas>
+<div id="start"><div><h2>🏰 The Friendly Ghost's House</h2><p>Learn English with Boo!</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><button class="big yes" id="go">▶ Play</button><button class="big no" id="helpGo">❓ How to play</button></div></div></div>
+<div id="help" hidden><div class="card">
+ <h2>❓ How to play / Как играть</h2>
+ <p><b>Boo</b> — добрый призрак. Помогите ему обставить замок и расскажите по-английски, что в комнате. Игра тренирует <b>There is / There are</b>, вопросы <b>How many…?</b>, <b>Is / Are there…?</b> и предлоги (on, under, above, in front of…). Включите звук. Микрофон (Chrome / Edge) — по желанию: ребёнок повторяет фразу вслух.</p>
+ <h3>Каждое задание</h3>
+ <p>Boo спрашивает → ребёнок отвечает → Boo произносит правильную фразу → ребёнок повторяет её вслух (🎤) → <b>Next ➡️</b>. Уровни можно выбирать сверху.</p>
+ <h3>Уровни</h3>
+ <ol>
+  <li><b>How many…?</b> Посчитайте предметы и нажмите цифру. Мебель появится в замке.</li>
+  <li><b>Is / Are there…?</b> Посмотрите на комнату и ответьте: Yes, there is/are или No, there isn't/aren't.</li>
+  <li><b>Toys.</b> Boo спрашивает «What can you see?». Перетащите игрушки: 🎁 THERE IS — одна, 🧰 THERE ARE — много.</li>
+  <li><b>Prepositions.</b> Смотрите на подсвеченные предметы и соберите предложение из плиток: There is/are + предмет + предлог + место.</li>
+  <li><b>Listen &amp; move.</b> Boo произносит предложение — перенесите нужное число предметов на нужное место. Не получается? Нажмите 💡 Show me.</li>
+ </ol>
+ <h3>Кнопки</h3>
+ <p>🔊 повторить вопрос · 👁️ скрыть текст (нажмите на размытый текст, чтобы подсмотреть) · 🎵 музыка · ⭐ звёзды: 2 за ответ с первой попытки, 1 за повторную, +1 за произнесённую фразу.</p>
+ <button class="big yes" id="helpClose">OK 👍</button>
+</div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
