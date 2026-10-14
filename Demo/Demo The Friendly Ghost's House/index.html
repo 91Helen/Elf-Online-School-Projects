@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Friendly Ghost's House — DEMO | ELF Online English School</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="logo.jpg"/>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header>
+ <div class="ttl"><div class="brand sm"><img class="logo" src="favicon.png" alt="ELF Online English School logo" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo logo-fb',textContent:'🧝'}))"><div class="bn"><b>ELF Online English School</b><i>Feel Magic ✨</i></div></div><h1>🏰 The Friendly Ghost's House <span class="demo-badge">DEMO</span></h1></div>
+ <div class="hud">
+  <button class="pill on" data-lv="1">Level 1</button><button class="pill" data-lv="2">Level 2</button><button class="pill lock" data-lv="3">🔒 3</button><button class="pill lock" data-lv="4">🔒 4</button><button class="pill lock" data-lv="5">🔒 5</button>
+  <button class="pill" id="helpBtn" title="How to play">❓</button><button class="pill" id="eyeBtn" title="Hide / show text">👁️</button>
+  <button class="pill" id="musicBtn" title="Music">🎵</button>
+  <div class="pill" id="streak">🔥 0</div><div class="pill" id="stars">⭐ 0</div>
+ </div>
+</header>
+<section id="room" aria-label="Castle room">
+ <div class="floor"></div>
+ <div class="win" id="win"><span class="moon" id="moon">🌙</span></div>
+ <span class="deco bat" id="bat"><span>🦇</span></span>
+ <span class="deco spider" id="spider">🕷️</span>
+ <span class="deco pumpkin" id="pumpkin">🎃</span>
+ <div id="ghostWrap"><canvas id="ghost" width="380" height="380"></canvas></div>
+ <div id="speech">Hi! I'm Boo. Tap me!</div>
+ <div id="items"></div>
+</section>
+<section id="quest">
+ <div id="cart" title="Tap to hear!"></div>
+ <div id="question"></div><div id="task"></div>
+ <div id="sentence" aria-live="polite"></div>
+ <div id="tools"><button class="pill" id="listenBtn">🔊 Listen</button><button class="pill" id="sayBtn" hidden>🗣️ I said it! +⭐</button><button class="pill" id="nextBtn" hidden>Next ➡️</button></div>
+</section>
+<div id="controls"></div>
+<footer class="foot">Demo version · Full game: 5 levels · <a class="cta" href="#"><span class="cta-text"></span></a><br>© ELF Online English School · Feel Magic ✨</footer>
+<canvas id="confetti"></canvas>
+
+<div id="start"><div>
+ <div class="brand big"><img class="logo" src="favicon.png" alt="ELF Online English School logo" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo logo-fb',textContent:'🧝'}))"><div class="bn"><b>ELF Online English School</b><i>Feel Magic ✨</i></div></div>
+ <h2>🏰 The Friendly Ghost's House</h2><p>Learn English with Boo! <span class="demo-badge">DEMO</span></p>
+ <div class="btns"><button class="big yes" id="go">▶ Play</button><button class="big no" id="helpGo">❓ How to play</button></div>
+</div></div>
+
+<div id="help" hidden><div class="card">
+ <h2>❓ How to play</h2>
+ <p><b>Boo</b> is a friendly ghost. Help him decorate his castle and say what's in the room in English! The game practises <b>There is / There are</b>, <b>How many…?</b> and <b>Is / Are there…?</b>. Turn on the sound. Microphone (Chrome / Edge) is optional: the child repeats the phrase aloud.</p>
+ <ol>
+  <li><b>Level 1 — How many…?</b> Count and tap the number.</li>
+  <li><b>Level 2 — Is / Are there…?</b> Look at the room, answer Yes or No.</li>
+  <li><b>Levels 3–5</b> (toys, sentence building, prepositions, listen &amp; move) — in the full version 🔓</li>
+ </ol>
+ <p>🔊 repeat · 👁️ hide text · 🎵 music · ⭐ 2 stars for a first-try answer, 1 for a retry, +1 for saying the phrase.</p>
+ <button class="big yes" id="helpClose">OK 👍</button>
+</div></div>
+
+<div id="buy" hidden><div class="card">
+ <h2>🔓 Full version</h2>
+ <ul>
+  <li>5 levels: counting, Yes/No questions, toys, sentence building, prepositions</li>
+  <li>Voice, speaking practice, stars and rewards</li>
+  <li>Works in any browser, no installation</li>
+ </ul>
+ <p>Want the full game for your lessons or school? Message us:</p>
+ <a class="big yes cta-btn cta" href="#">💌 <span class="cta-text"></span></a>
+ <button class="pill" id="buyClose">Back to demo</button>
+</div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
